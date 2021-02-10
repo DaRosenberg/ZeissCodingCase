@@ -24,7 +24,7 @@ The application consists of 3 services:
 
 - `redis`: standard Redis used as semi-persistent storage of machine stati
 - `ingestor`: a .NET Core console app that connects to the WebSocket endpoint, receives machine status messages, and updates status per machine in Redis
-- `api`: an ASP.NET Core Web API app that provides a simple REST API that provides the last known status for each machine
+- `api`: an ASP.NET Core Web API app that provides a simple REST API that reads the last known status for each machine from Redis and provides this information as a JSON response
 
 Redis is configured with a persistent storage volume.
 
