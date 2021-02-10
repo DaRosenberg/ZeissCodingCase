@@ -1,0 +1,21 @@
+# Remove the line below if you want to inherit .editorconfig settings from higher directories
+root = true
+
+[*]
+end_of_line              = crlf
+indent_style             = tab
+indent_size              = tab
+charset                  = utf-8
+trim_trailing_whitespace = true
+insert_final_newline	 = false
+
+[*.{yaml,yml}]
+indent_style = space
+indent_size = 2
+
+[*.csproj]
+indent_style = space
+indent_size = 2
+
+[*.cs]
+dotnet_diagnostic.VSTHRD002.severity = none

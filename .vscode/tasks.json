@@ -1,0 +1,41 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+            "args": [
+                "build",
+                "-property:GenerateFullPaths=true",
+				"-maxCpuCount",
+                "-consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+		{
+			"label": "docker build ingestor",
+			"type": "shell",
+			"dependsOn": [
+				"build"
+			],
+			"group": "build",
+			"command": "docker build -t=zeiss/ingestor:0.0.1 ${workspaceFolder}/Zeiss.Ingestor",
+			"problemMatcher": []
+		},
+		{
+			"label": "docker build api",
+			"type": "shell",
+			"dependsOn": [
+				"build"
+			],
+			"group": "build",
+			"command": "docker build -t=zeiss/api:0.0.1 ${workspaceFolder}/Zeiss.Api",
+			"problemMatcher": []
+		}
+    ]
+}

@@ -1,0 +1,29 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "ingestor",
+			"type": "coreclr",
+			"request": "launch",
+			"preLaunchTask": "${defaultBuildTask}",
+			// If you have changed target frameworks, make sure to update the program path.
+			"program": "${workspaceFolder}/Zeiss.Ingestor/bin/Debug/net5.0/Zeiss.Ingestor.dll",
+			"args": [],
+			"cwd": "${workspaceFolder}/Zeiss.Ingestor",
+			"console": "externalTerminal",
+			"stopAtEntry": false
+		},
+		{
+			"name": "api",
+			"type": "coreclr",
+			"request": "launch",
+			"preLaunchTask": "${defaultBuildTask}",
+			// If you have changed target frameworks, make sure to update the program path.
+			"program": "${workspaceFolder}/Zeiss.Api/bin/Debug/net5.0/Zeiss.Api.dll",
+			"args": [],
+			"cwd": "${workspaceFolder}/Zeiss.Api",
+			"console": "externalTerminal",
+			"stopAtEntry": false
+		}
+	]
+}

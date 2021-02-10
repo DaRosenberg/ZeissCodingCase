@@ -1,0 +1,11 @@
+{
+    "omnisharp.enableEditorConfigSupport": true,
+	"omnisharp.enableRoslynAnalyzers": false,
+    "files.exclude": {
+        "**/bin": true,
+        "**/obj": true,
+        "**/node_modules": true
+    },
+    "editor.detectIndentation": false,
+	"editor.insertSpaces": false,
+}
